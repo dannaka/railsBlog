@@ -1,0 +1,19 @@
+current directory: /home/normal/blue-balloon/vendor/bundle/ruby/2.3.0/gems/byebug-9.0.6/ext/byebug
+/home/normal/.rbenv/versions/2.3.4/bin/ruby -r ./siteconf20170821-2564-1418gvv.rb extconf.rb
+creating Makefile
+
+current directory: /home/normal/blue-balloon/vendor/bundle/ruby/2.3.0/gems/byebug-9.0.6/ext/byebug
+make "DESTDIR=" clean
+
+current directory: /home/normal/blue-balloon/vendor/bundle/ruby/2.3.0/gems/byebug-9.0.6/ext/byebug
+make "DESTDIR="
+compiling breakpoint.c
+compiling byebug.c
+compiling context.c
+compiling locker.c
+compiling threads.c
+linking shared-object byebug/byebug.so
+
+current directory: /home/normal/blue-balloon/vendor/bundle/ruby/2.3.0/gems/byebug-9.0.6/ext/byebug
+make "DESTDIR=" install
+/bin/install -c -m 0755 byebug.so ./.gem.20170821-2564-cbzmtw/byebug
