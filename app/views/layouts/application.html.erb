@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>BlueBalloon</title>
+  <title><%= yield(:title).presence + " | Blue Balloon Blog" || "Blue Balloon Blog" %></title>
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
