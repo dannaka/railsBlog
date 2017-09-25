@@ -22,3 +22,7 @@
 /node_modules
 
 /config/secrets.yml
+/public/packs
+/node_modules
+
+*lock

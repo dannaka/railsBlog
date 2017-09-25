@@ -1,84 +1,32 @@
-body {
-  background-color: #fff;
-  color: #333;
-  margin: 33px;
-  font-family: verdana, arial, helvetica, sans-serif;
-  font-size: 13px;
-  line-height: 18px;
+main {
+    background-color: #333333;
 }
-
-p, ol, ul, td {
-  font-family: verdana, arial, helvetica, sans-serif;
-  font-size: 13px;
-  line-height: 18px;
+section {
+    background-color: #EEEEEE;
 }
-
-pre {
-  background-color: #eee;
-  padding: 10px;
-  font-size: 11px;
+section.mdl-layout__tab-panel {
+    min-height: 86vh;
 }
-
-a {
-  color: #000;
-
-  &:visited {
-    color: #666;
-  }
-
-  &:hover {
-    color: #fff;
-    background-color: #000;
-  }
+.mdl-layout-title a {
+    color: #FFFFFF;
+    text-decoration: none;
 }
-
-th {
-  padding-bottom: 5px;
+.page-content {
+    margin: 0 80px;
 }
-
-td {
-  padding: 0 5px 7px;
+.hidden {
+    display: none;
 }
-
-div {
-  &.field, &.actions {
-    margin-bottom: 10px;
-  }
+@media screen and (min-width: 1180px) {
+    .not-pc {
+        display: none;
+    }
 }
-
-#notice {
-  color: green;
-}
-
-.field_with_errors {
-  padding: 2px;
-  background-color: red;
-  display: table;
-}
-
-#error_explanation {
-  width: 450px;
-  border: 2px solid red;
-  padding: 7px 7px 0;
-  margin-bottom: 20px;
-  background-color: #f0f0f0;
-
-  h2 {
-    text-align: left;
-    font-weight: bold;
-    padding: 5px 5px 5px 15px;
-    font-size: 12px;
-    margin: -7px -7px 0;
-    background-color: #c00;
-    color: #fff;
-  }
-
-  ul li {
-    font-size: 12px;
-    list-style: square;
-  }
-}
-
-label {
-  display: block;
+@media screen and (max-width:1180px) { 
+    .pc {
+        display: none;
+    }
+    .page-content {
+        margin: 0 5%;
+    }
 }

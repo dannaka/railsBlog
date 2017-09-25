@@ -1,15 +1,6 @@
 // Place all the styles related to the StaticPages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-body {
-    font: 14px "Century Gothic", Futura, sans-serif;
-    margin: 20px;
-}
-
-ol, ul {
-    padding-left: 30px;
-}
-
 .board-row:after {
     clear: both;
     content: "";
@@ -52,3 +43,7 @@ ol, ul {
     margin-left: 20px;
 }
 
+$mdc-theme-primary: #315FBF;
+$mdc-theme-secondary: #FF6560;
+
+@import "@material/theme/mdc-theme";

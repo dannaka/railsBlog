@@ -9,8 +9,9 @@
     padding: 20px;
     white-space: pre-wrap;"
 ></div>
-<div id="root"></div>
+<div id="root-tic-tac-toe"></div>
 <script>
+var errors = document.getElementById('errors');
 window.addEventListener('mousedown', function(e) {
     document.body.classList.add('mouse-navigation');
     document.body.classList.remove('kbd-navigation');
@@ -27,9 +28,10 @@ window.addEventListener('click', function(e) {
     }
 });
 window.onerror = function(message, source, line, col, error) {
-var text = error ? error.stack || error : message + ' (at ' + source + ':' + line + ':' + col + ')';
-    errors.textContent += text + '\n';
-    errors.style.display = '';
+  var text = error ? error.stack || error
+                    : message + ' (at ' + source + ':' + line + ':' + col + ')';
+  errors.textContent += text + '\n';
+  errors.style.display = '';
 };
 console.error = (function(old) {
     return function error() {

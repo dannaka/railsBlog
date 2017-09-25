@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import '../../assets/stylesheets/static_pages.scss'; 
+import '../../assets/stylesheets/static_pages.scss';
+import {MDCRipple, MDCRippleFoundation} from '@material/ripple/dist/mdc.ripple';
 
 
 function calculateWinner(squares) {
@@ -13,7 +14,7 @@ function calculateWinner(squares) {
         [2, 5, 8],
         [0, 4, 8],
         [2, 4, 6],
-        ];
+    ];
     for (let i = 0; i < lines.length; i++) {
         const [a, b, c] = lines[i];
         if (squares[a] && squares[a] === squares[b] && squares[a] === squares[c]) {
@@ -33,10 +34,12 @@ function Square(props) {
 
 class Board extends React.Component {
     renderSquare(i) {
-        return <Square 
-                    value={this.props.squares[i]}
-                    onClick={() => this.props.onClick(i)}
-               />;
+        return (
+            <Square
+                value={this.props.squares[i]}
+                onClick={() => this.props.onClick(i)}
+            />
+        );
     }
 
     render() {
@@ -72,13 +75,15 @@ class Game extends React.Component {
             stepNumber: 0,
             xIsNext: true,
         }
+        this.jumpTo = this.jumpTo.bind(this);
+        this.handleClick = this.handleClick.bind(this);
     }
 
     handleClick(i) {
         const history = this.state.history.slice(0, this.state.stepNumber + 1);
         const current = history[this.state.stepNumber];
         const squares = current.squares.slice();
-    
+
         if (calculateWinner(squares) || squares[i]) {
             return;
         }
@@ -128,7 +133,7 @@ class Game extends React.Component {
         return (
             <div className="game">
                 <div className="game-board">
-                    <Board 
+                    <Board
                         squares={current.squares}
                         onClick={(i) => this.handleClick(i)}
                     />
@@ -146,6 +151,5 @@ class Game extends React.Component {
 
 ReactDOM.render(
     <Game />,
-    document.getElementById('root')
+    document.getElementById('root-tic-tac-toe')
 );
-

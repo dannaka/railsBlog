@@ -4,8 +4,10 @@
 
 const webpack = require('webpack')
 const merge = require('webpack-merge')
+const UglifyEsPlugin = require('uglify-es-webpack-plugin');
 const CompressionPlugin = require('compression-webpack-plugin')
 const sharedConfig = require('./shared.js')
+
 
 module.exports = merge(sharedConfig, {
   output: { filename: '[name]-[chunkhash].js' },
@@ -13,6 +15,9 @@ module.exports = merge(sharedConfig, {
   stats: 'normal',
 
   plugins: [
+
+    new UglifyEsPlugin(),
+    /*
     new webpack.optimize.UglifyJsPlugin({
       minimize: true,
       sourceMap: true,
@@ -25,6 +30,7 @@ module.exports = merge(sharedConfig, {
         comments: false
       }
     }),
+    */
 
     new CompressionPlugin({
       asset: '[path].gz[query]',
