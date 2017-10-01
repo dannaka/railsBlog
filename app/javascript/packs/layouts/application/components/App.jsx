@@ -13,7 +13,6 @@ import {
 } from 'react-router-dom';
 
 import DynamicTabBar from './DynamicTabBar';
-//import DynamicTab from './DynamicTab';
 import DynamicTabPanel from './DynamicTabPanel';
 
 export default class App extends PureComponent {
@@ -25,6 +24,15 @@ export default class App extends PureComponent {
     'activeTabId': this.props.activeTabId,
   }
 
+  get tabDefaultClasses() {
+    return "mdc-tab mdc-theme--text-primary-on-primary mdc-ripple-upgraded";
+  }
+
+  getTabClasses(tabId) {
+    console.debug(this.state.activeTabId);
+    return this.tabDefaultClasses + (this.state.activeTabId == tabId ? ' mdc-tab--active' : '');
+  }
+
   render() {
     return (
       <Router>
@@ -34,7 +42,7 @@ export default class App extends PureComponent {
               activeTabId={this.state.activeTabId} >
               <NavLink to="/articles"
                 id="tab-1"
-                className="mdc-tab mdc-tab--active mdc-theme--text-primary-on-primary mdc-ripple-upgraded"
+                className={this.getTabClasses('tab-1')}
                 activeClassName="mdc-tab--active"
                 role="tab"
                 aria-controls="panel-1" >
@@ -42,7 +50,7 @@ export default class App extends PureComponent {
               </NavLink>
               <NavLink to="/works"
                 id="tab-2"
-                className="mdc-tab mdc-theme--text-primary-on-primary mdc-ripple-upgraded"
+                className={this.getTabClasses('tab-2')}
                 activeClassName="mdc-tab--active"
                 role="tab"
                 aria-controls="panel-2" >
@@ -50,7 +58,7 @@ export default class App extends PureComponent {
               </NavLink>
               <NavLink to="/author"
                 id="tab-3"
-                className="mdc-tab mdc-theme--text-primary-on-primary mdc-ripple-upgraded"
+                className={this.getTabClasses('tab-3')}
                 activeClassName="mdc-tab--active"
                 role="tab"
                 aria-controls="panel-3" >

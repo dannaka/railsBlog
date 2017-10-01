@@ -1,12 +1,3 @@
-body {
-  font: 14px "Century Gothic", Futura, sans-serif;
-  margin: 20px;
-}
-
-ol, ul {
-  padding-left: 30px;
-}
-
 .board-row:after {
   clear: both;
   content: "";
@@ -52,4 +43,410 @@ ol, ul {
 
 .game-info {
   margin-left: 20px;
+}
+
+.mdc-theme--background {
+  /* @alternate */
+  background-color: #fff;
+  background-color: #fff;
+  background-color: #fff;
+}
+
+.mdc-theme--primary {
+  /* @alternate */
+  color: #315FBF !important;
+  color: #315FBF !important;
+  color: #315FBF !important;
+}
+
+.mdc-theme--primary-light {
+  /* @alternate */
+  color: #9ab2e5 !important;
+  color: #9ab2e5 !important;
+  color: #9ab2e5 !important;
+}
+
+.mdc-theme--primary-dark {
+  /* @alternate */
+  color: #6187d6 !important;
+  color: #6187d6 !important;
+  color: #6187d6 !important;
+}
+
+.mdc-theme--secondary {
+  /* @alternate */
+  color: #FF6560 !important;
+  color: #FF6560 !important;
+  color: #FF6560 !important;
+}
+
+.mdc-theme--secondary-light {
+  /* @alternate */
+  color: #ffaaa7 !important;
+  color: #ffaaa7 !important;
+  color: #ffaaa7 !important;
+}
+
+.mdc-theme--secondary-dark {
+  /* @alternate */
+  color: #ff2019 !important;
+  color: #ff2019 !important;
+  color: #ff2019 !important;
+}
+
+.mdc-theme--text-primary-on-primary {
+  /* @alternate */
+  color: white !important;
+  color: white !important;
+  color: white !important;
+}
+
+.mdc-theme--text-secondary-on-primary {
+  /* @alternate */
+  color: rgba(255, 255, 255, 0.7) !important;
+  color: rgba(255, 255, 255, 0.7) !important;
+  color: rgba(255, 255, 255, 0.7) !important;
+}
+
+.mdc-theme--text-hint-on-primary {
+  /* @alternate */
+  color: rgba(255, 255, 255, 0.5) !important;
+  color: rgba(255, 255, 255, 0.5) !important;
+  color: rgba(255, 255, 255, 0.5) !important;
+}
+
+.mdc-theme--text-disabled-on-primary {
+  /* @alternate */
+  color: rgba(255, 255, 255, 0.5) !important;
+  color: rgba(255, 255, 255, 0.5) !important;
+  color: rgba(255, 255, 255, 0.5) !important;
+}
+
+.mdc-theme--text-icon-on-primary {
+  /* @alternate */
+  color: rgba(255, 255, 255, 0.5) !important;
+  color: rgba(255, 255, 255, 0.5) !important;
+  color: rgba(255, 255, 255, 0.5) !important;
+}
+
+.mdc-theme--text-primary-on-primary-light {
+  /* @alternate */
+  color: rgba(0, 0, 0, 0.87) !important;
+  color: rgba(0, 0, 0, 0.87) !important;
+  color: rgba(0, 0, 0, 0.87) !important;
+}
+
+.mdc-theme--text-secondary-on-primary-light {
+  /* @alternate */
+  color: rgba(0, 0, 0, 0.54) !important;
+  color: rgba(0, 0, 0, 0.54) !important;
+  color: rgba(0, 0, 0, 0.54) !important;
+}
+
+.mdc-theme--text-hint-on-primary-light {
+  /* @alternate */
+  color: rgba(0, 0, 0, 0.38) !important;
+  color: rgba(0, 0, 0, 0.38) !important;
+  color: rgba(0, 0, 0, 0.38) !important;
+}
+
+.mdc-theme--text-disabled-on-primary-light {
+  /* @alternate */
+  color: rgba(0, 0, 0, 0.38) !important;
+  color: rgba(0, 0, 0, 0.38) !important;
+  color: rgba(0, 0, 0, 0.38) !important;
+}
+
+.mdc-theme--text-icon-on-primary-light {
+  /* @alternate */
+  color: rgba(0, 0, 0, 0.38) !important;
+  color: rgba(0, 0, 0, 0.38) !important;
+  color: rgba(0, 0, 0, 0.38) !important;
+}
+
+.mdc-theme--text-primary-on-primary-dark {
+  /* @alternate */
+  color: white !important;
+  color: white !important;
+  color: white !important;
+}
+
+.mdc-theme--text-secondary-on-primary-dark {
+  /* @alternate */
+  color: rgba(255, 255, 255, 0.7) !important;
+  color: rgba(255, 255, 255, 0.7) !important;
+  color: rgba(255, 255, 255, 0.7) !important;
+}
+
+.mdc-theme--text-hint-on-primary-dark {
+  /* @alternate */
+  color: rgba(255, 255, 255, 0.5) !important;
+  color: rgba(255, 255, 255, 0.5) !important;
+  color: rgba(255, 255, 255, 0.5) !important;
+}
+
+.mdc-theme--text-disabled-on-primary-dark {
+  /* @alternate */
+  color: rgba(255, 255, 255, 0.5) !important;
+  color: rgba(255, 255, 255, 0.5) !important;
+  color: rgba(255, 255, 255, 0.5) !important;
+}
+
+.mdc-theme--text-icon-on-primary-dark {
+  /* @alternate */
+  color: rgba(255, 255, 255, 0.5) !important;
+  color: rgba(255, 255, 255, 0.5) !important;
+  color: rgba(255, 255, 255, 0.5) !important;
+}
+
+.mdc-theme--text-primary-on-secondary {
+  /* @alternate */
+  color: rgba(0, 0, 0, 0.87) !important;
+  color: rgba(0, 0, 0, 0.87) !important;
+  color: rgba(0, 0, 0, 0.87) !important;
+}
+
+.mdc-theme--text-secondary-on-secondary {
+  /* @alternate */
+  color: rgba(0, 0, 0, 0.54) !important;
+  color: rgba(0, 0, 0, 0.54) !important;
+  color: rgba(0, 0, 0, 0.54) !important;
+}
+
+.mdc-theme--text-hint-on-secondary {
+  /* @alternate */
+  color: rgba(0, 0, 0, 0.38) !important;
+  color: rgba(0, 0, 0, 0.38) !important;
+  color: rgba(0, 0, 0, 0.38) !important;
+}
+
+.mdc-theme--text-disabled-on-secondary {
+  /* @alternate */
+  color: rgba(0, 0, 0, 0.38) !important;
+  color: rgba(0, 0, 0, 0.38) !important;
+  color: rgba(0, 0, 0, 0.38) !important;
+}
+
+.mdc-theme--text-icon-on-secondary {
+  /* @alternate */
+  color: rgba(0, 0, 0, 0.38) !important;
+  color: rgba(0, 0, 0, 0.38) !important;
+  color: rgba(0, 0, 0, 0.38) !important;
+}
+
+.mdc-theme--text-primary-on-secondary-light {
+  /* @alternate */
+  color: rgba(0, 0, 0, 0.87) !important;
+  color: rgba(0, 0, 0, 0.87) !important;
+  color: rgba(0, 0, 0, 0.87) !important;
+}
+
+.mdc-theme--text-secondary-on-secondary-light {
+  /* @alternate */
+  color: rgba(0, 0, 0, 0.54) !important;
+  color: rgba(0, 0, 0, 0.54) !important;
+  color: rgba(0, 0, 0, 0.54) !important;
+}
+
+.mdc-theme--text-hint-on-secondary-light {
+  /* @alternate */
+  color: rgba(0, 0, 0, 0.38) !important;
+  color: rgba(0, 0, 0, 0.38) !important;
+  color: rgba(0, 0, 0, 0.38) !important;
+}
+
+.mdc-theme--text-disabled-on-secondary-light {
+  /* @alternate */
+  color: rgba(0, 0, 0, 0.38) !important;
+  color: rgba(0, 0, 0, 0.38) !important;
+  color: rgba(0, 0, 0, 0.38) !important;
+}
+
+.mdc-theme--text-icon-on-secondary-light {
+  /* @alternate */
+  color: rgba(0, 0, 0, 0.38) !important;
+  color: rgba(0, 0, 0, 0.38) !important;
+  color: rgba(0, 0, 0, 0.38) !important;
+}
+
+.mdc-theme--text-primary-on-secondary-dark {
+  /* @alternate */
+  color: white !important;
+  color: white !important;
+  color: white !important;
+}
+
+.mdc-theme--text-secondary-on-secondary-dark {
+  /* @alternate */
+  color: rgba(255, 255, 255, 0.7) !important;
+  color: rgba(255, 255, 255, 0.7) !important;
+  color: rgba(255, 255, 255, 0.7) !important;
+}
+
+.mdc-theme--text-hint-on-secondary-dark {
+  /* @alternate */
+  color: rgba(255, 255, 255, 0.5) !important;
+  color: rgba(255, 255, 255, 0.5) !important;
+  color: rgba(255, 255, 255, 0.5) !important;
+}
+
+.mdc-theme--text-disabled-on-secondary-dark {
+  /* @alternate */
+  color: rgba(255, 255, 255, 0.5) !important;
+  color: rgba(255, 255, 255, 0.5) !important;
+  color: rgba(255, 255, 255, 0.5) !important;
+}
+
+.mdc-theme--text-icon-on-secondary-dark {
+  /* @alternate */
+  color: rgba(255, 255, 255, 0.5) !important;
+  color: rgba(255, 255, 255, 0.5) !important;
+  color: rgba(255, 255, 255, 0.5) !important;
+}
+
+.mdc-theme--text-primary-on-background {
+  /* @alternate */
+  color: rgba(0, 0, 0, 0.87) !important;
+  color: rgba(0, 0, 0, 0.87) !important;
+  color: rgba(0, 0, 0, 0.87) !important;
+}
+
+.mdc-theme--text-secondary-on-background {
+  /* @alternate */
+  color: rgba(0, 0, 0, 0.54) !important;
+  color: rgba(0, 0, 0, 0.54) !important;
+  color: rgba(0, 0, 0, 0.54) !important;
+}
+
+.mdc-theme--text-hint-on-background {
+  /* @alternate */
+  color: rgba(0, 0, 0, 0.38) !important;
+  color: rgba(0, 0, 0, 0.38) !important;
+  color: rgba(0, 0, 0, 0.38) !important;
+}
+
+.mdc-theme--text-disabled-on-background {
+  /* @alternate */
+  color: rgba(0, 0, 0, 0.38) !important;
+  color: rgba(0, 0, 0, 0.38) !important;
+  color: rgba(0, 0, 0, 0.38) !important;
+}
+
+.mdc-theme--text-icon-on-background {
+  /* @alternate */
+  color: rgba(0, 0, 0, 0.38) !important;
+  color: rgba(0, 0, 0, 0.38) !important;
+  color: rgba(0, 0, 0, 0.38) !important;
+}
+
+.mdc-theme--text-primary-on-light {
+  /* @alternate */
+  color: rgba(0, 0, 0, 0.87) !important;
+  color: rgba(0, 0, 0, 0.87) !important;
+  color: rgba(0, 0, 0, 0.87) !important;
+}
+
+.mdc-theme--text-secondary-on-light {
+  /* @alternate */
+  color: rgba(0, 0, 0, 0.54) !important;
+  color: rgba(0, 0, 0, 0.54) !important;
+  color: rgba(0, 0, 0, 0.54) !important;
+}
+
+.mdc-theme--text-hint-on-light {
+  /* @alternate */
+  color: rgba(0, 0, 0, 0.38) !important;
+  color: rgba(0, 0, 0, 0.38) !important;
+  color: rgba(0, 0, 0, 0.38) !important;
+}
+
+.mdc-theme--text-disabled-on-light {
+  /* @alternate */
+  color: rgba(0, 0, 0, 0.38) !important;
+  color: rgba(0, 0, 0, 0.38) !important;
+  color: rgba(0, 0, 0, 0.38) !important;
+}
+
+.mdc-theme--text-icon-on-light {
+  /* @alternate */
+  color: rgba(0, 0, 0, 0.38) !important;
+  color: rgba(0, 0, 0, 0.38) !important;
+  color: rgba(0, 0, 0, 0.38) !important;
+}
+
+.mdc-theme--text-primary-on-dark {
+  /* @alternate */
+  color: white !important;
+  color: white !important;
+  color: white !important;
+}
+
+.mdc-theme--text-secondary-on-dark {
+  /* @alternate */
+  color: rgba(255, 255, 255, 0.7) !important;
+  color: rgba(255, 255, 255, 0.7) !important;
+  color: rgba(255, 255, 255, 0.7) !important;
+}
+
+.mdc-theme--text-hint-on-dark {
+  /* @alternate */
+  color: rgba(255, 255, 255, 0.5) !important;
+  color: rgba(255, 255, 255, 0.5) !important;
+  color: rgba(255, 255, 255, 0.5) !important;
+}
+
+.mdc-theme--text-disabled-on-dark {
+  /* @alternate */
+  color: rgba(255, 255, 255, 0.5) !important;
+  color: rgba(255, 255, 255, 0.5) !important;
+  color: rgba(255, 255, 255, 0.5) !important;
+}
+
+.mdc-theme--text-icon-on-dark {
+  /* @alternate */
+  color: rgba(255, 255, 255, 0.5) !important;
+  color: rgba(255, 255, 255, 0.5) !important;
+  color: rgba(255, 255, 255, 0.5) !important;
+}
+
+.mdc-theme--primary-bg {
+  /* @alternate */
+  background-color: #315FBF !important;
+  background-color: #315FBF !important;
+  background-color: #315FBF !important;
+}
+
+.mdc-theme--primary-light-bg {
+  /* @alternate */
+  background-color: #9ab2e5 !important;
+  background-color: #9ab2e5 !important;
+  background-color: #9ab2e5 !important;
+}
+
+.mdc-theme--primary-dark-bg {
+  /* @alternate */
+  background-color: #6187d6 !important;
+  background-color: #6187d6 !important;
+  background-color: #6187d6 !important;
+}
+
+.mdc-theme--secondary-bg {
+  /* @alternate */
+  background-color: #FF6560 !important;
+  background-color: #FF6560 !important;
+  background-color: #FF6560 !important;
+}
+
+.mdc-theme--secondary-light-bg {
+  /* @alternate */
+  background-color: #ffaaa7 !important;
+  background-color: #ffaaa7 !important;
+  background-color: #ffaaa7 !important;
+}
+
+.mdc-theme--secondary-dark-bg {
+  /* @alternate */
+  background-color: #ff2019 !important;
+  background-color: #ff2019 !important;
+  background-color: #ff2019 !important;
 }

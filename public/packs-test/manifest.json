@@ -1,6 +1,15 @@
 {
   "application.js": "/packs-test/application.js",
   "hello_react.js": "/packs-test/hello_react.js",
+  "layouts/application/components/App.css": "/packs-test/layouts/application/components/App.css",
+  "layouts/application/components/App.js": "/packs-test/layouts/application/components/App.js",
+  "layouts/application/components/DynamicTab.css": "/packs-test/layouts/application/components/DynamicTab.css",
+  "layouts/application/components/DynamicTab.js": "/packs-test/layouts/application/components/DynamicTab.js",
+  "layouts/application/components/DynamicTabBar.css": "/packs-test/layouts/application/components/DynamicTabBar.css",
+  "layouts/application/components/DynamicTabBar.js": "/packs-test/layouts/application/components/DynamicTabBar.js",
+  "layouts/application/components/DynamicTabPanel.js": "/packs-test/layouts/application/components/DynamicTabPanel.js",
+  "layouts/application/index.css": "/packs-test/layouts/application/index.css",
+  "layouts/application/index.js": "/packs-test/layouts/application/index.js",
   "tic-tac-toe.css": "/packs-test/tic-tac-toe.css",
   "tic-tac-toe.js": "/packs-test/tic-tac-toe.js"
 }
