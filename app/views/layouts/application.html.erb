@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html>
   <head>
-  <title><%= full_title(yield(:title)) %></title>
+    <title><%= full_title(yield(:title)) %></title>
     <%= csrf_meta_tags %>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css">
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <!--[if lt IE 9]>
     <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/r29/html5.min.js">
     </script>
@@ -17,8 +17,11 @@
   <body class="mdc-typography">
     <div id="root">
     </div>
+    <%= link_to "Sign up now!", signup_path,
+    class: "mdc-button mdc-button--raised mdc-button--accent" %>
     <%= render 'layouts/footer' %>
     <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
+    <script>mdc.ripple.MDCRipple.attachTo(document.querySelector('.mdc-button'));</script>
     <%= javascript_pack_tag 'layouts/application/index' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </body>

@@ -1,6 +1,9 @@
 module ApplicationHelper
+  def base_title
+    "Blue Balloon Blog"
+  end
+
   def full_title(page_title = '')
-    base_title = "Blue Balloon Blog"
     if page_title.empty?
       base_title
     else
