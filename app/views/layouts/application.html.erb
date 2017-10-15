@@ -19,7 +19,9 @@
     </div>
     <%= link_to "Sign up now!", signup_path,
     class: "mdc-button mdc-button--raised mdc-button--accent" %>
+    <%= yield %>
     <%= render 'layouts/footer' %>
+    <%= debug(params) if Rails.env.development? %>
     <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
     <script>mdc.ripple.MDCRipple.attachTo(document.querySelector('.mdc-button'));</script>
     <%= javascript_pack_tag 'layouts/application/index' %>

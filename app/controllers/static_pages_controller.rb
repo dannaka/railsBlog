@@ -10,5 +10,13 @@ class StaticPagesController < ApplicationController
 
   def contact
   end
-    
+
+  def firework
+    render layout: false
+  end
+
+  def cubic_ash
+    render layout: false
+  end
+
 end

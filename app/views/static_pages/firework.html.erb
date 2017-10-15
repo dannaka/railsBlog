@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= full_title("花火") %></title>
+    <%= csrf_meta_tags %>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/r29/html5.min.js">
+    </script>
+    <![endif]-->
+  </head>
+
+  <body>
+    <canvas id="canvas" style="margin: 0 auto;display: block;"></canvas>
+    <script id="gaussian-vs" type="x-shader/x-vertex">
+    attribute vec3 position;
+    attribute vec2 texCoord;
+    uniform   mat4 mvpMatrix;
+    varying   vec2 vTexCoord;
+
+    void main(void){
+      vTexCoord   = texCoord;
+      gl_Position = mvpMatrix * vec4(position, 1.0);
+    }
+    </script>
+    <script id="gaussian-fs" type="x-shader/x-fragment">
+    precision mediump float;
+
+    uniform float     textureWidth;
+    uniform float     textureHeight;
+    uniform sampler2D texture;
+    uniform float     weight[10];
+    uniform bool      isHorizontal;
+    varying vec2      vTexCoord;
+
+    void main(void){
+      float tFragW = 1.0 / textureWidth;
+      float tFragH = 1.0 / textureHeight;
+      vec2  fc;
+      vec3  destColor = vec3(0.0);
+
+      if(isHorizontal){
+        fc = vec2(gl_FragCoord.s, textureHeight - gl_FragCoord.t);
+        destColor += texture2D(texture, (fc + vec2(-9.0, 0.0)) * tFragH).rgb * weight[9];
+        destColor += texture2D(texture, (fc + vec2(-8.0, 0.0)) * tFragH).rgb * weight[8];
+        destColor += texture2D(texture, (fc + vec2(-7.0, 0.0)) * tFragH).rgb * weight[7];
+        destColor += texture2D(texture, (fc + vec2(-6.0, 0.0)) * tFragH).rgb * weight[6];
+        destColor += texture2D(texture, (fc + vec2(-5.0, 0.0)) * tFragH).rgb * weight[5];
+        destColor += texture2D(texture, (fc + vec2(-4.0, 0.0)) * tFragH).rgb * weight[4];
+        destColor += texture2D(texture, (fc + vec2(-3.0, 0.0)) * tFragH).rgb * weight[3];
+        destColor += texture2D(texture, (fc + vec2(-2.0, 0.0)) * tFragH).rgb * weight[2];
+        destColor += texture2D(texture, (fc + vec2(-1.0, 0.0)) * tFragH).rgb * weight[1];
+        destColor += texture2D(texture, (fc + vec2( 0.0, 0.0)) * tFragH).rgb * weight[0];
+        destColor += texture2D(texture, (fc + vec2( 1.0, 0.0)) * tFragH).rgb * weight[1];
+        destColor += texture2D(texture, (fc + vec2( 2.0, 0.0)) * tFragH).rgb * weight[2];
+        destColor += texture2D(texture, (fc + vec2( 3.0, 0.0)) * tFragH).rgb * weight[3];
+        destColor += texture2D(texture, (fc + vec2( 4.0, 0.0)) * tFragH).rgb * weight[4];
+        destColor += texture2D(texture, (fc + vec2( 5.0, 0.0)) * tFragH).rgb * weight[5];
+        destColor += texture2D(texture, (fc + vec2( 6.0, 0.0)) * tFragH).rgb * weight[6];
+        destColor += texture2D(texture, (fc + vec2( 7.0, 0.0)) * tFragH).rgb * weight[7];
+        destColor += texture2D(texture, (fc + vec2( 8.0, 0.0)) * tFragH).rgb * weight[8];
+        destColor += texture2D(texture, (fc + vec2( 9.0, 0.0)) * tFragH).rgb * weight[9];
+      }else{
+        fc = gl_FragCoord.st;
+        destColor += texture2D(texture, (fc + vec2(0.0, -9.0)) * tFragW).rgb * weight[9];
+        destColor += texture2D(texture, (fc + vec2(0.0, -8.0)) * tFragW).rgb * weight[8];
+        destColor += texture2D(texture, (fc + vec2(0.0, -7.0)) * tFragW).rgb * weight[7];
+        destColor += texture2D(texture, (fc + vec2(0.0, -6.0)) * tFragW).rgb * weight[6];
+        destColor += texture2D(texture, (fc + vec2(0.0, -5.0)) * tFragW).rgb * weight[5];
+        destColor += texture2D(texture, (fc + vec2(0.0, -4.0)) * tFragW).rgb * weight[4];
+        destColor += texture2D(texture, (fc + vec2(0.0, -3.0)) * tFragW).rgb * weight[3];
+        destColor += texture2D(texture, (fc + vec2(0.0, -2.0)) * tFragW).rgb * weight[2];
+        destColor += texture2D(texture, (fc + vec2(0.0, -1.0)) * tFragW).rgb * weight[1];
+        destColor += texture2D(texture, (fc + vec2(0.0,  0.0)) * tFragW).rgb * weight[0];
+        destColor += texture2D(texture, (fc + vec2(0.0,  1.0)) * tFragW).rgb * weight[1];
+        destColor += texture2D(texture, (fc + vec2(0.0,  2.0)) * tFragW).rgb * weight[2];
+        destColor += texture2D(texture, (fc + vec2(0.0,  3.0)) * tFragW).rgb * weight[3];
+        destColor += texture2D(texture, (fc + vec2(0.0,  4.0)) * tFragW).rgb * weight[4];
+        destColor += texture2D(texture, (fc + vec2(0.0,  5.0)) * tFragW).rgb * weight[5];
+        destColor += texture2D(texture, (fc + vec2(0.0,  6.0)) * tFragW).rgb * weight[6];
+        destColor += texture2D(texture, (fc + vec2(0.0,  7.0)) * tFragW).rgb * weight[7];
+        destColor += texture2D(texture, (fc + vec2(0.0,  8.0)) * tFragW).rgb * weight[8];
+        destColor += texture2D(texture, (fc + vec2(0.0,  9.0)) * tFragW).rgb * weight[9];
+      }
+
+      gl_FragColor = vec4(destColor, 1.0);
+    }
+    </script>
+    <script id="vs" type="x-shader/x-vertex">
+    attribute vec3 position;
+    attribute vec3 normal;
+    attribute vec4 color;
+    uniform mat4 mvpMatrix;
+    uniform float pointSize;
+    varying vec3 vNormal;
+    varying vec4 vColor;
+
+    void main() {
+      vNormal = normal;
+      vColor = color;
+      gl_Position = mvpMatrix * vec4(position, 1.0);
+      gl_PointSize = pointSize;
+    }
+    </script>
+    <script id="fs" type="x-shader/x-fragment">
+    precision highp float;
+
+    uniform mat4 invMatrix;
+    uniform vec3 lightDirection;
+    uniform vec3 eyePosition;
+    uniform vec4 ambientColor;
+    varying vec3 vNormal;
+    varying vec4 vColor;
+
+    void main()
+    {
+      vec3 invLight = normalize(invMatrix * vec4(lightDirection, 0.0)).xyz;
+      vec3 invEye = normalize(invMatrix * vec4(eyePosition, 0.0)).xyz;
+      vec3 halfLE = normalize(invLight + invEye);
+      float diffuse = clamp(dot(vNormal, invLight), 0.0, 1.0);
+      float specular = pow(clamp(dot(vNormal, halfLE), 0.0, 1.0), 50.0);
+      vec4 light = vColor * vec4(vec3(diffuse), 1.0) + vec4(vec3(specular), 1.0);
+      vec4 destColor = light + ambientColor;
+      gl_FragColor = destColor;
+    }
+    </script>
+    <%= javascript_pack_tag 'firework' %>
+  </body>
+</html>
